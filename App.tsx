@@ -43,17 +43,14 @@ const LogoBar = () => (
 interface ActorStickerProps {
   fullname: string;
   character: string;
-  imageUrl: string;
+  imageProps: ImageProps;
 }
 
 const ActorSticker = (props: ActorStickerProps) => {
   const imagePath = `./assets/actors/${props.character.toLowerCase()}.jpg`;
   return (
     <View style={{ width: 150, backgroundColor: "#2A2A2A", marginRight: 15 }}>
-      <Image
-        source={{ uri: props.imageUrl }}
-        style={{ width: 150, height: 222 }}
-      />
+      <Image source={props.imageProps} style={{ width: 150, height: 222 }} />
       <View style={{ padding: 10 }}>
         <Text
           style={{ color: "white", marginBottom: 5 }}
@@ -245,92 +242,92 @@ export default function App() {
         <ActorSticker
           character="Cooper"
           fullname="Matthew McConaughey"
-          imageUrl="https://m.media-amazon.com/images/M/MV5BMTg0MDc3ODUwOV5BMl5BanBnXkFtZTcwMTk2NjY4Nw@@._V1_UX178_CR0,0,178,264_AL_.jpg"
+          imageProps={require("./assets/actors/cooper.jpg")}
         />
         <ActorSticker
           character="Brand"
           fullname="Anne Hathaway"
-          imageUrl="https://m.media-amazon.com/images/M/MV5BMTRhNzQ3NGMtZmQ1Mi00ZTViLTk3OTgtOTk0YzE2YTgwMmFjXkEyXkFqcGdeQXVyNzg5MzIyOA@@._V1_UY264_CR17,0,178,264_AL_.jpg"
+          imageProps={require("./assets/actors/brand.jpg")}
         />
         <ActorSticker
           character="Murph"
           fullname="Jessica Chastain"
-          imageUrl="https://m.media-amazon.com/images/M/MV5BMTU1MDM5NjczOF5BMl5BanBnXkFtZTcwOTY2MDE4OA@@._V1_UX178_CR0,0,178,264_AL_.jpg"
+          imageProps={require("./assets/actors/murph.jpg")}
         />
         <ActorSticker
           character="Murph (10 Yrs.)"
           fullname="Mackenzie Foy"
-          imageUrl="https://m.media-amazon.com/images/M/MV5BYTIyMzExODgtNzllNy00OWQwLTlhM2QtMWU1ZTI2MjgwMTQxXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_UY264_CR5,0,178,264_AL_.jpg"
+          imageProps={require("./assets/actors/murph-10yrs.jpg")}
         />
         <ActorSticker
           character="Murph (Older)"
           fullname="Ellen Burstyn"
-          imageUrl="https://m.media-amazon.com/images/M/MV5BMTU4MjYxMDc3MF5BMl5BanBnXkFtZTYwNzU3MDIz._V1_UX214_CR0,0,214,317_AL_.jpg"
+          imageProps={require("./assets/actors/murph-older.jpg")}
         />
         <ActorSticker
           character="Donald"
           fullname="John Lithgow"
-          imageUrl="https://m.media-amazon.com/images/M/MV5BMTQzMzUyNDkzNF5BMl5BanBnXkFtZTcwNTMwNTU5MQ@@._V1_UY317_CR19,0,214,317_AL_.jpg"
+          imageProps={require("./assets/actors/donald.jpg")}
         />
         <ActorSticker
           character="Tom (15 Yrs.)"
           fullname="Timothée Chalamet"
-          imageUrl="https://m.media-amazon.com/images/M/MV5BOWU1Nzg0M2ItYjEzMi00ODliLThkODAtNGEyYzRkZTBmMmEzXkEyXkFqcGdeQXVyNDk2Mzk2NDg@._V1_UY317_CR13,0,214,317_AL_.jpg"
+          imageProps={require("./assets/actors/tom-15yrs.jpg")}
         />
         <ActorSticker
           character="School Principal"
           fullname="David Oyelowo"
-          imageUrl="https://m.media-amazon.com/images/M/MV5BOTMyODkxMzktNWMwMy00MjRlLTlmNjUtM2I0NTczZDU3YjE0XkEyXkFqcGdeQXVyOTkyMDQ2Mw@@._V1_UY317_CR15,0,214,317_AL_.jpg"
+          imageProps={require("./assets/actors/school-principal.jpg")}
         />
         <ActorSticker
           character="Ms. Hanley"
           fullname="Collette Wolfe"
-          imageUrl="https://m.media-amazon.com/images/M/MV5BMjIwMDc5Mzk5MV5BMl5BanBnXkFtZTcwMjMzMTUxMw@@._V1_UY317_CR1,0,214,317_AL_.jpg"
+          imageProps={require("./assets/actors/ms-hanley.jpg")}
         />
         <ActorSticker
           character="Boots"
           fullname="Francis X. McCarthy"
-          imageUrl="https://m.media-amazon.com/images/M/MV5BMzE5OTg2MzA4Nl5BMl5BanBnXkFtZTcwMTc3NDM1Nw@@._V1_UY317_CR132,0,214,317_AL_.jpg"
+          imageProps={require("./assets/actors/boots.jpg")}
         />
         <ActorSticker
           character="TARS (voice)"
           fullname="Bill Irwin"
-          imageUrl="https://m.media-amazon.com/images/M/MV5BMTU3NjI4MzM4NV5BMl5BanBnXkFtZTYwNzk4NTc4._V1_UY317_CR1,0,214,317_AL_.jpg"
+          imageProps={require("./assets/actors/tars-voice.jpg")}
         />
         <ActorSticker
           character="Smith"
           fullname="Andrew Borba"
-          imageUrl="https://m.media-amazon.com/images/M/MV5BMTEyODY4NjExMjVeQTJeQWpwZ15BbWU3MDQ5MjA3Njk@._V1_UX214_CR0,0,214,317_AL_.jpg"
+          imageProps={require("./assets/actors/smith.jpg")}
         />
         <ActorSticker
           character="Doyle"
           fullname="Wes Bentley"
-          imageUrl="https://m.media-amazon.com/images/M/MV5BOTgyOTY5OTA5OF5BMl5BanBnXkFtZTcwNzM1MjM1Nw@@._V1_UX214_CR0,0,214,317_AL_.jpg"
+          imageProps={require("./assets/actors/doyle.jpg")}
         />
         <ActorSticker
           character="Williams"
           fullname="William Devane"
-          imageUrl="https://m.media-amazon.com/images/M/MV5BMTkwOTE2NDIyNV5BMl5BanBnXkFtZTgwOTE1MTQ2NjE@._V1_UY317_CR12,0,214,317_AL_.jpg"
+          imageProps={require("./assets/actors/williams.jpg")}
         />
         <ActorSticker
           character="Professeur Brand"
           fullname="Michael Caine"
-          imageUrl="https://m.media-amazon.com/images/M/MV5BMjAwNzIwNTQ4Ml5BMl5BanBnXkFtZTYwMzE1MTUz._V1_UY317_CR7,0,214,317_AL_.jpg"
+          imageProps={require("./assets/actors/professor-brand.jpg")}
         />
         <ActorSticker
           character="Romilly"
           fullname="David Gyasi"
-          imageUrl="https://m.media-amazon.com/images/M/MV5BOWIyNjg5YzUtZmVlOC00YTYyLWIxMjgtMGRlY2U3MDljZjg5XkEyXkFqcGdeQXVyMjI3NzY0NTA@._V1_UY317_CR15,0,214,317_AL_.jpg"
+          imageProps={require("./assets/actors/romilly.jpg")}
         />
         <ActorSticker
           character="CASE (voice)"
           fullname="Josh Stewart"
-          imageUrl="https://m.media-amazon.com/images/M/MV5BMGU3YmYzMDMtNGVjOC00MjQ0LWFiMjMtMjc3YWZmOGI4NzJjXkEyXkFqcGdeQXVyMzA5MDIzOTE@._V1_UY317_CR12,0,214,317_AL_.jpg"
+          imageProps={require("./assets/actors/case-voice.jpg")}
         />
         <ActorSticker
           character="Tom"
           fullname="Casey Affleck"
-          imageUrl="https://m.media-amazon.com/images/M/MV5BMTY3Nzc0MDg1OF5BMl5BanBnXkFtZTgwMzk5OTk2OTE@._V1_UY317_CR129,0,214,317_AL_.jpg"
+          imageProps={require("./assets/actors/tom.jpg")}
         />
       </ScrollView>
 
